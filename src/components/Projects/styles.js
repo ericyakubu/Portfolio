@@ -14,25 +14,30 @@ export const Project = styled.div`
     display: flex;
 
     img {
-        width: 90rem;
-        max-width: 80vw;
-        height: auto;
-        max-height: 67.5rem;
+        width: 95rem;
+        /* max-width: 80vw; */
+        height: 70rem;
+        /* max-height: 70rem; */
         object-fit: cover;
 
         @media (max-width: 1440px) {
             width: 75rem;
-            max-width: 50vw;
+            /* max-width: 50vw; */
             height: 56.25rem;
         }
         @media (max-width: 1024px) {
             max-width: 75vw;
             max-height: 40vh;
         }
+        @media (max-width: 425px) {
+            width: 50rem;
+            max-width: 90vw;
+            height: 36.25rem;
+            max-height: 65.25vw;
+        }
     }
 
     .project {
-        margin-left: 3rem;
         width: 60rem;
         display: flex;
         flex-direction: column;
@@ -46,10 +51,11 @@ export const Project = styled.div`
             width: 70vw;
         }
         @media (max-width: 425px) {
-            max-width: 80vw;
+            width: 90vw;
         }
 
         &Name {
+            margin: 0 0 0 3rem;
             font-size: 5rem;
             text-transform: capitalize;
 
@@ -73,6 +79,7 @@ export const Project = styled.div`
                 }
             }
             @media (max-width: 1024px) {
+                margin: 0;
                 font-size: 3rem;
             }
             @media (max-width: 425px) {
@@ -81,6 +88,7 @@ export const Project = styled.div`
         }
 
         &Description {
+            margin: 0 0 0 3rem;
             font-size: 2.5rem;
             height: 39.5rem;
             max-height: 39.5rem;
@@ -108,6 +116,7 @@ export const Project = styled.div`
                 max-height: 19.5vh;
             }
             @media (max-width: 1024px) {
+                margin: 0;
                 font-size: 1.75rem;
                 max-height: 12.5vh;
             }
@@ -135,8 +144,9 @@ export const Project = styled.div`
                 margin: 1rem 0 0;
             }
             @media (max-width: 425px) {
+                width: 100vw;
                 font-size: 2rem;
-                margin: 1rem 0 0;
+                /* margin: 1rem 0 0 0; */
             }
         }
 
@@ -176,7 +186,7 @@ export const Project = styled.div`
             width: 100%;
             flex-wrap: wrap;
             position: relative;
-            justify-content: space-around;
+            justify-content: center;
         }
 
         &Skill {
