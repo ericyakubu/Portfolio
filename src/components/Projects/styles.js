@@ -300,7 +300,7 @@ export const SlideBar = styled.div`
         bottom: 5%;
     }
     @media (max-width: 425px) {
-        bottom: 7%;
+        bottom: 9%;
     }
 `;
 export const SlideBarThumb = styled.div`
@@ -370,6 +370,6 @@ export const Controls = styled.div`
         }
     }
     @media (max-width: 425px) {
-        bottom: 7%;
+        bottom: 9%;
     }
 `;
