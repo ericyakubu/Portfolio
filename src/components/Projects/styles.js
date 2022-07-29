@@ -299,6 +299,9 @@ export const SlideBar = styled.div`
     @media (max-width: 1024px) {
         bottom: 5%;
     }
+    @media (max-width: 425px) {
+        bottom: 7%;
+    }
 `;
 export const SlideBarThumb = styled.div`
     width: ${`${numberOfProjects}vw`};
@@ -365,5 +368,8 @@ export const Controls = styled.div`
                 margin-right: 70vw;
             }
         }
+    }
+    @media (max-width: 425px) {
+        bottom: 7%;
     }
 `;
