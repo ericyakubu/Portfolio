@@ -1,0 +1,64 @@
+@use "../../style/variables" as v;
+
+.line_break {
+    width: 85%;
+    height: 1px;
+    background-color: v.$third_color;
+    opacity: 0.5;
+}
+
+.skills {
+    padding: 6rem 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    p {
+        font-family: v.$font_poppins;
+        font-size: 1.8rem;
+        margin-bottom: 3rem;
+        width: 75rem;
+        max-width: 100%;
+        font-weight: 200;
+        text-align: center;
+        color: v.$third_color;
+    }
+
+    &_first,
+    &_second {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: v.$bp_laptop) {
+    .skills {
+        padding: 6rem 7rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+
+        &_first,
+        &_second {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: v.$bp_phone) {
+    .skills {
+        padding: 6rem 2rem;
+
+        &_first,
+        &_second {
+            gap: 1rem;
+        }
+    }
+}
