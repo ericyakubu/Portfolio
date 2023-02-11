@@ -77,11 +77,11 @@
             background-position: center;
             background-size: cover;
             filter: grayscale(100%);
-            transition: all 1s ease;
-            -webkit-transition: all 1s ease;
-            -moz-transition: all 1s ease;
-            -ms-transition: all 1s ease;
-            -o-transition: all 1s ease;
+            transition: all 0.5s ease;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -ms-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
         }
         &:hover {
             .about_main_img {
@@ -94,8 +94,26 @@
 
 @media (max-width: v.$bp_laptop) {
     .about {
+        height: fit-content;
+        min-height: fit-content;
         &_main {
-            height: 85%;
+            min-height: 60rem;
+
+            &_me {
+                min-height: fit-content;
+                .second {
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    // width: calc(100% - 4rem);
+                    transform: none;
+                    -webkit-transform: none;
+                    -moz-transform: none;
+                    -ms-transform: none;
+                    -o-transform: none;
+                }
+            }
         }
     }
 }
@@ -112,32 +130,11 @@
                     position: relative;
                     line-height: 1.4;
                 }
-
-                .second {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    width: calc(100% - 4rem);
-                    transform: translate(-50%, 0);
-                    -webkit-transform: translate(-50%, 0);
-                    -moz-transform: translate(-50%, 0);
-                    -ms-transform: translate(-50%, 0);
-                    -o-transform: translate(-50%, 0);
-
-                    & :before {
-                        content: "";
-                        display: block;
-                        width: 100%;
-                        height: 0.1rem;
-                        background-color: v.$fourth_color;
-                        opacity: 0.5;
-                        margin-bottom: 3rem;
-                    }
-                }
             }
         }
     }
 }
+
 @media (max-width: v.$bp_phone), (max-height: 450px) {
     .about {
         height: fit-content;
