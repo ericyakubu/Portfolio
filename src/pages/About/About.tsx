@@ -8,7 +8,6 @@ const About = () => {
                 <div className="about_main_me">
                     <div className="first">
                         <h3 className="section_title">about me</h3>
-                        {/* <h3>about me</h3> */}
                         <p>I'm creative and competent Front-End Web Developer offering 3+ years of experience in designing and developing multiple web-based applications and websites incorporating a range of technologies.</p>
                     </div>
                     <div className="second">

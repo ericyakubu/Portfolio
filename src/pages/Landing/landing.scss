@@ -3,7 +3,8 @@
 .landing {
     padding: 0 7rem 3rem;
     width: 100vw;
-    height: 100vh;
+    height: fit-content;
+    min-height: 100vh;
     position: relative;
 
     display: flex;
@@ -11,30 +12,14 @@
     justify-content: space-between;
 
     &_main {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        max-width: 100%;
-        text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
+        margin: auto;
+        text-align: center;
 
         a {
-            position: absolute;
             display: none;
-            left: 50%;
-            bottom: 0;
-            transform: translate(-50%, max(15rem, 300%));
-            -webkit-transform: translate(-50%, max(15rem, 300%));
-            -moz-transform: translate(-50%, max(15rem, 300%));
-            -ms-transform: translate(-50%, max(15rem, 300%));
-            -o-transform: translate(-50%, max(15rem, 300%));
         }
 
         h4,
@@ -51,6 +36,7 @@
             font-family: v.$font_poppins;
             width: fit-content;
             margin-bottom: 6rem;
+            margin-top: 6rem;
         }
 
         h1 {
@@ -67,6 +53,7 @@
             font-size: 1.8rem;
             width: 57.5rem;
             max-width: 100%;
+            margin-bottom: 4rem;
         }
     }
 
@@ -96,15 +83,6 @@
         &_main {
             max-width: 100%;
             padding: 0 2.5rem;
-
-            a {
-                display: block;
-                transform: translate(-50%, min(12.5rem, 300%));
-                -webkit-transform: translate(-50%, min(12.5rem, 300%));
-                -moz-transform: translate(-50%, min(12.5rem, 300%));
-                -ms-transform: translate(-50%, min(12.5rem, 300%));
-                -o-transform: translate(-50%, min(12.5rem, 300%));
-            }
 
             h4,
             h1,
@@ -495,7 +473,7 @@ header {
 }
 @media (max-width: v.$bp_phone) {
     header {
-        height: 15%;
+        max-height: 15vh;
     }
 }
 

@@ -138,7 +138,7 @@
         }
     }
 }
-@media (max-width: v.$bp_phone) {
+@media (max-width: v.$bp_phone), (max-height: 450px) {
     .about {
         height: fit-content;
         min-height: fit-content;

@@ -105,6 +105,16 @@
     }
 }
 
+@media (max-height: 500px) {
+    .project {
+        &_main {
+            p {
+                display: none;
+            }
+        }
+    }
+}
+
 @media (max-width: v.$bp_laptop) {
     .project {
         padding: 2rem;
