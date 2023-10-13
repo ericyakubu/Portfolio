@@ -1,0 +1,45 @@
+@import "../../style/variables";
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 7rem;
+  background-color: $secondary_color;
+
+  &_p {
+    font-family: $font_poppins;
+    font-size: 1.8rem;
+    color: $third_color;
+    margin-bottom: 3.5rem;
+  }
+
+  &_main {
+    width: clamp(40%, 130.5rem, 100%);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: calc(64.5rem + 64.5rem + 1.5rem);
+    border-radius: 3rem;
+    -webkit-border-radius: 3rem;
+    -moz-border-radius: 3rem;
+    -ms-border-radius: 3rem;
+    -o-border-radius: 3rem;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: $bp_laptop) {
+  .projects {
+    padding: 6rem 2rem;
+  }
+}
+@media (max-width: $bp_phone) {
+  .projects {
+    text-align: center;
+    &_main {
+      width: 100%;
+    }
+  }
+}

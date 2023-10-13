@@ -1,0 +1,165 @@
+@import "../../style/variables";
+
+.about {
+  width: 100vw;
+  height: 100vh;
+  background-color: $secondary_color;
+  position: relative;
+  padding: 2.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_main {
+    width: 130rem;
+    max-width: calc(100% - 5rem);
+    max-height: calc(100% - 12rem);
+    height: 81rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    border-radius: 3rem;
+    -webkit-border-radius: 3rem;
+    -moz-border-radius: 3rem;
+    -ms-border-radius: 3rem;
+    -o-border-radius: 3rem;
+
+    &_me {
+      width: 50%;
+      height: 100%;
+      padding: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: #f6f6f6;
+      position: relative;
+
+      .first,
+      .second {
+        font-size: 1.8rem;
+        font-family: $font_poppins;
+        font-style: 300;
+        position: relative;
+      }
+
+      h3 {
+        font-weight: 600;
+        color: #292929;
+      }
+
+      .second {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: calc(100% - 8rem);
+        transform: translate(-50%, 0);
+        -webkit-transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0);
+
+        & :before {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 0.1rem;
+          background-color: $fourth_color;
+          opacity: 0.5;
+          margin-bottom: 3rem;
+        }
+      }
+    }
+
+    &_img {
+      width: 50%;
+      height: 100%;
+      background-image: url("../../img/about.png");
+      background-position: center;
+      background-size: cover;
+      filter: grayscale(100%);
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+    }
+    &:hover {
+      .about_main_img {
+        filter: none;
+        -webkit-filter: none;
+      }
+    }
+  }
+}
+
+@media (max-width: $bp_laptop) {
+  .about {
+    height: fit-content;
+    min-height: fit-content;
+    &_main {
+      min-height: 60rem;
+
+      &_me {
+        min-height: fit-content;
+        .second {
+          position: relative;
+          top: 0;
+          left: 0;
+          width: 100%;
+          // width: calc(100% - 4rem);
+          transform: none;
+          -webkit-transform: none;
+          -moz-transform: none;
+          -ms-transform: none;
+          -o-transform: none;
+        }
+      }
+    }
+  }
+}
+@media (max-width: $bp_tablet) {
+  .about {
+    &_main {
+      &_me {
+        padding: 2rem;
+        .first,
+        .second {
+          font-size: 1.8rem;
+          font-family: $font_poppins;
+          font-weight: 300;
+          position: relative;
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $bp_phone), (max-height: 450px) {
+  .about {
+    height: fit-content;
+    min-height: fit-content;
+
+    &_main {
+      flex-direction: column-reverse;
+      height: fit-content;
+      max-height: fit-content;
+
+      &_me {
+        width: 100%;
+        min-height: 57.5rem;
+
+        .second {
+          width: 100%;
+          position: relative;
+          margin: 3rem 0;
+        }
+      }
+
+      &_img {
+        width: 100%;
+        min-height: 57.5rem;
+      }
+    }
+  }
+}

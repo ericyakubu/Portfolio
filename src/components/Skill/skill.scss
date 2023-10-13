@@ -1,54 +1,54 @@
-@use "../../style/variables" as v;
+@import "../../style/variables";
 
 .skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 13rem;
+
+  &_icon {
+    width: 6.5rem;
+    height: 6.5rem;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
-    width: 13rem;
+    background-color: $secondary_color_2;
+    border-radius: 1.5rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
+
+    svg {
+      width: 3.5rem;
+      height: 3.5rem;
+      color: $fifth_color_2;
+    }
+  }
+
+  &_name {
+    font-size: 1.4rem;
+    font-family: $font_poppins;
+    text-transform: capitalize;
+    font-weight: 200;
+    color: $fifth_color;
+  }
+}
+
+@media (max-width: $bp_laptop) {
+  .skill {
+    width: 10rem;
 
     &_icon {
-        width: 6.5rem;
-        height: 6.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: v.$secondary_color_2;
-        border-radius: 1.5rem;
-        -webkit-border-radius: 1.5rem;
-        -moz-border-radius: 1.5rem;
-        -ms-border-radius: 1.5rem;
-        -o-border-radius: 1.5rem;
-
-        svg {
-            width: 3.5rem;
-            height: 3.5rem;
-            color: v.$fifth_color_2;
-        }
+      svg {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
     }
 
     &_name {
-        font-size: 1.4rem;
-        font-family: v.$font_poppins;
-        text-transform: capitalize;
-        font-weight: 200;
-        color: v.$fifth_color;
+      font-size: 1.8rem;
     }
-}
-
-@media (max-width: v.$bp_laptop) {
-    .skill {
-        width: 10rem;
-
-        &_icon {
-            svg {
-                width: 3.5rem;
-                height: 3.5rem;
-            }
-        }
-
-        &_name {
-            font-size: 1.8rem;
-        }
-    }
+  }
 }
