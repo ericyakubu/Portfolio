@@ -4,16 +4,29 @@ import { FiMenu } from "react-icons/fi";
 import { RxCrossCircled } from "react-icons/rx";
 
 const Landing: React.FC = () => {
-  const time: Date = new Date();
-  const hours: number = time.getHours();
-  const minutes: number = time.getMinutes();
-
   const [modal, setModal] = useState<boolean>(false);
   const [theme, setTheme] = useState<boolean>(true);
 
   const changeModal = () => {
     setModal((prev) => !prev);
   };
+
+  const targetTimeZone = `Europe/Samara`;
+  const now = new Date();
+
+  const options: {
+    timeZone: string;
+    hour12: boolean;
+    hour: "2-digit" | "numeric" | undefined;
+    minute: "2-digit" | "numeric" | undefined;
+  } = {
+    timeZone: targetTimeZone,
+    hour12: false,
+    hour: "2-digit",
+    minute: "2-digit",
+  };
+  const formatter = new Intl.DateTimeFormat("en-US", options);
+  const formattedTime = formatter.formatToParts(now);
 
   const changeTheme = () => {
     setTheme((prev) => !prev);
@@ -138,9 +151,9 @@ const Landing: React.FC = () => {
             </a>
           </div>
           <div className="landing_bottom">
-            <span>based in canada</span>
+            <span>based in russia</span>
             <span>
-              local time {hours} : {minutes >= 10 ? minutes : `0${minutes}`}
+              local time {formattedTime[0].value} : {formattedTime[2].value}
             </span>
           </div>
         </div>

@@ -1,4 +1,5 @@
 @import "../../style/variables";
+@import "../../style/mixins.scss";
 
 .project {
   width: calc(50% - 0.75rem);
@@ -32,12 +33,10 @@
     z-index: 10;
 
     h3 {
-      font-family: $font_poppins;
-      font-size: 1.8rem;
+      @include textStyle(1.8rem, $font_poppins, 500);
       margin-bottom: 3rem;
       text-transform: uppercase;
       letter-spacing: 0.5rem;
-      font-weight: 500;
       color: $fifth_color_2;
     }
 
@@ -66,11 +65,9 @@
 
   &_discr {
     width: calc(100% - 4rem);
-    font-family: $font_poppins;
-    font-size: 1.8rem;
+    @include textMain;
     color: $fifth_color_2;
     margin-bottom: 3.5rem;
-    font-weight: 300;
   }
 
   &_links {
@@ -82,9 +79,7 @@
 
   &_link {
     text-decoration: underline;
-    font-size: 1.6rem;
-    font-family: $font_poppins;
-    font-weight: 300;
+    @include textSecondary;
     color: $fifth_color_2;
   }
 

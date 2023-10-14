@@ -1,4 +1,5 @@
 @import "../../style/variables";
+@import "../../style/mixins.scss";
 
 .about {
   width: 100vw;
@@ -36,9 +37,7 @@
 
       .first,
       .second {
-        font-size: 1.8rem;
-        font-family: $font_poppins;
-        font-style: 300;
+        @include textMain;
         position: relative;
       }
 
@@ -124,9 +123,7 @@
         padding: 2rem;
         .first,
         .second {
-          font-size: 1.8rem;
-          font-family: $font_poppins;
-          font-weight: 300;
+          @include textMain;
           position: relative;
           line-height: 1.4;
         }

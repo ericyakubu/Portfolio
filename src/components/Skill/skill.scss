@@ -1,4 +1,5 @@
 @import "../../style/variables";
+@import "../../style/mixins.scss";
 
 .skill {
   display: flex;
@@ -28,10 +29,8 @@
   }
 
   &_name {
-    font-size: 1.4rem;
-    font-family: $font_poppins;
+    @include textStyle(1.4rem, $font_poppins, 200);
     text-transform: capitalize;
-    font-weight: 200;
     color: $fifth_color;
   }
 }

@@ -1,4 +1,5 @@
 @import "../../style/variables";
+@import "../../style/mixins.scss";
 
 .landing {
   padding: 0 7rem 3rem;
@@ -26,31 +27,27 @@
     h1,
     p {
       color: $third_color;
-      font-weight: 300;
     }
 
     h4 {
-      font-size: 1.8rem;
+      @include textMain;
       letter-spacing: 0.5rem;
       text-transform: uppercase;
-      font-family: $font_poppins;
       width: fit-content;
       margin-bottom: 6rem;
       margin-top: 6rem;
     }
 
     h1 {
-      font-size: 6.4rem;
+      @include textStyle(6.4rem, $font_neutral, 300);
       letter-spacing: 0;
       text-transform: uppercase;
-      font-family: $font_neutral;
       width: fit-content;
       margin-bottom: 1.5rem;
     }
 
     p {
-      font-family: $font_poppins;
-      font-size: 1.8rem;
+      @include textMain;
       width: 57.5rem;
       max-width: 100%;
       margin-bottom: 4rem;
@@ -58,10 +55,9 @@
   }
 
   &_bottom {
+    @include textStyle(1.4rem, $font_poppins, 300);
     display: flex;
     justify-content: space-between;
-    font-family: $font_poppins;
-    font-size: 1.4rem;
     color: $fourth_color;
     text-transform: uppercase;
   }
@@ -129,9 +125,7 @@ header {
     flex-direction: column;
     text-align: center;
 
-    font-family: $font_poppins;
-    font-weight: 400;
-    font-size: 1.6rem;
+    @include textSecondary;
     letter-spacing: 0.5rem;
 
     color: $fourth_color;
@@ -144,10 +138,7 @@ header {
       list-style: none;
 
       a {
-        font-family: $font_poppins;
-        font-weight: 300;
-        font-size: 1.6rem;
-
+        @include textThird;
         color: $fifth_color;
         text-decoration: none;
       }
@@ -219,10 +210,8 @@ header {
 
       p {
         text-transform: uppercase;
-        font-size: 1rem;
-        font-family: $font_poppins;
+        @include textStyle(1rem, $font_poppins, 300);
         color: $fifth_color;
-        font-weight: 300;
       }
     }
   }
@@ -248,9 +237,7 @@ header {
       flex-direction: column;
       text-align: center;
 
-      font-family: $font_poppins;
-      font-weight: 400;
-      font-size: 1.6rem;
+      @include textSecondary;
       letter-spacing: 0.5rem;
 
       color: $fourth_color;
@@ -262,9 +249,7 @@ header {
       li {
         list-style: none;
 
-        font-family: $font_poppins;
-        font-weight: 300;
-        font-size: 1.6rem;
+        @include textSecondary;
 
         color: $fifth_color;
       }
@@ -334,10 +319,8 @@ header {
 
         p {
           text-transform: uppercase;
-          font-size: 1rem;
-          font-family: $font_poppins;
           color: $fifth_color;
-          font-weight: 300;
+          @include textStyle(1rem, $font_poppins, 400);
         }
       }
     }
@@ -373,9 +356,7 @@ header {
       flex-direction: column;
       text-align: center;
 
-      font-family: $font_poppins;
-      font-weight: 400;
-      font-size: 1.6rem;
+      @include textSecondary;
       letter-spacing: 0.5rem;
 
       color: $fourth_color;
@@ -449,10 +430,8 @@ header {
 
         p {
           text-transform: uppercase;
-          font-size: 1rem;
-          font-family: $font_poppins;
           color: $fifth_color;
-          font-weight: 300;
+          @include textStyle(1rem, $font_poppins, 300);
         }
       }
     }
@@ -502,9 +481,7 @@ header {
       flex-direction: column;
       text-align: center;
 
-      font-family: $font_poppins;
-      font-weight: 400;
-      font-size: 1.6rem;
+      @include textSecondary;
       letter-spacing: 0.5rem;
 
       color: $fourth_color;
@@ -557,9 +534,7 @@ header {
       -ms-transition: all 0.5s ease;
       -o-transition: all 0.5s ease;
       a {
-        font-family: $font_poppins;
-        font-weight: 300;
-        font-size: 1.6rem;
+        @include textThird;
 
         color: $fifth_color;
         text-decoration: none;
@@ -587,10 +562,8 @@ header {
 
     a,
     h3:last-child {
+      @include textStyle(1.4rem, $font_poppins, 300);
       text-align: center;
-      font-size: 1.4rem;
-      font-family: $font_poppins;
-      font-weight: 300;
       color: $third_color;
       margin-bottom: 1rem;
       opacity: 0.7;

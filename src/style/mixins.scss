@@ -1,0 +1,24 @@
+@import "./variables";
+@mixin textStyle($size, $font, $weight) {
+  font-size: $size;
+  font-family: $font;
+  font-weight: $weight;
+}
+
+@mixin textMain {
+  font-size: 1.8rem;
+  font-family: $font_poppins;
+  font-weight: 300;
+}
+
+@mixin textSecondary {
+  font-size: 1.6rem;
+  font-family: $font_poppins;
+  font-weight: 400;
+}
+
+@mixin textThird {
+  font-size: 1.6rem;
+  font-family: $font_poppins;
+  font-weight: 300;
+}

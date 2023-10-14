@@ -1,4 +1,5 @@
 @import "../../style/variables";
+@import "../../style/mixins.scss";
 
 .line_break {
   width: 85%;
@@ -15,12 +16,10 @@
   gap: 3rem;
 
   p {
-    font-family: $font_poppins;
-    font-size: 1.8rem;
+    @include textStyle(1.8rem, $font_poppins, 200);
     margin-bottom: 3rem;
     width: 75rem;
     max-width: 100%;
-    font-weight: 200;
     text-align: center;
     color: $third_color;
   }

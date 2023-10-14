@@ -1,76 +1,74 @@
-@use "./variables" as v;
+@import "./variables";
+@import "./mixins.scss";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
 @font-face {
-    font-family: "Neutral Face";
-    src: url("./../NeutralFace.otf");
+  font-family: "Neutral Face";
+  src: url("./../NeutralFace.otf");
 }
 
 :root {
-    --main_color: #292929;
+  --main_color: #292929;
 
-    --secondary_color: #323232;
-    --secondary_color_2: #323232;
+  --secondary_color: #323232;
+  --secondary_color_2: #323232;
 
-    --third_color: #d8d8d8;
-    --fourth_color: #5f5f5f;
-    --fifth_color: #f6f6f6;
-    --fifth_color_2: #f6f6f6;
+  --third_color: #d8d8d8;
+  --fourth_color: #5f5f5f;
+  --fifth_color: #f6f6f6;
+  --fifth_color_2: #f6f6f6;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    background-color: v.$main_color;
-    transition: all 0.75s ease;
-    -webkit-transition: all 0.75s ease;
-    -moz-transition: all 0.75s ease;
-    -ms-transition: all 0.75s ease;
-    -o-transition: all 0.75s ease;
-    overflow-x: hidden;
+  background-color: $main_color;
+  transition: all 0.75s ease;
+  -webkit-transition: all 0.75s ease;
+  -moz-transition: all 0.75s ease;
+  -ms-transition: all 0.75s ease;
+  -o-transition: all 0.75s ease;
+  overflow-x: hidden;
 }
 
 button {
-    &:hover {
-        cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .button {
-    text-decoration: none;
-    padding: 1.25rem 3.5rem;
-    font-family: v.$font_poppins;
-    font-size: 1.6rem;
-    font-weight: 300;
-    max-width: fit-content;
-    border: none;
-    border-radius: 3.5rem;
-    -webkit-border-radius: 3.5rem;
-    -moz-border-radius: 3.5rem;
-    -ms-border-radius: 3.5rem;
-    -o-border-radius: 3.5rem;
+  text-decoration: none;
+  padding: 1.25rem 3.5rem;
 
-    &_dark {
-        color: v.$fifth_color;
-        background-color: v.$secondary_color;
-    }
+  @include textThird;
+  max-width: fit-content;
+  border: none;
+  border-radius: 3.5rem;
+  -webkit-border-radius: 3.5rem;
+  -moz-border-radius: 3.5rem;
+  -ms-border-radius: 3.5rem;
+  -o-border-radius: 3.5rem;
+
+  &_dark {
+    color: $fifth_color;
+    background-color: $secondary_color;
+  }
 }
 
 .section_title {
-    font-family: v.$font_poppins;
-    font-size: 1.8rem;
-    margin-bottom: 3rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5rem;
-    font-weight: 500;
-    color: v.$fifth_color;
+  @include textStyle(1.8rem, $font_poppins, 500);
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: $fifth_color;
 }
