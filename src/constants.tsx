@@ -44,7 +44,7 @@ export const projects: Projects[] = [
     ],
     link: "https://styled-ericyakubu.vercel.app/",
     git: "https://github.com/ericyakubu/Styled",
-    img: "./img/shop.png",
+    img: "./img/shop.webp",
   },
   {
     name: "Wheelzhub car rent app",
@@ -53,7 +53,7 @@ export const projects: Projects[] = [
     stack: ["Next.js", "Axios", "Tailwind"],
     link: "https://wheelzhub-ericyakubu.vercel.app/",
     git: "https://github.com/ericyakubu/Wheelzhub",
-    img: "./img/cars.jpg",
+    img: "./img/cars.webp",
   },
   {
     name: "Youtube clone",
@@ -62,7 +62,7 @@ export const projects: Projects[] = [
     stack: ["React.js", "Axios", "Material UI"],
     link: "https://youtube-ericyakubu.vercel.app/",
     git: "https://github.com/ericyakubu/youtube",
-    img: "./img/calculator.png",
+    img: "./img/calculator.webp",
   },
   {
     name: "Golds Gym fitness app",
@@ -71,6 +71,6 @@ export const projects: Projects[] = [
     stack: ["React.js", "Material UI"],
     link: "https://fitness-app-ericyakubu.vercel.app/",
     git: "https://github.com/ericyakubu/fitness_app",
-    img: "./img/barbel.jpg",
+    img: "./img/barbel.webp",
   },
 ];
