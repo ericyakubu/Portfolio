@@ -23,13 +23,13 @@
       display: none;
     }
 
-    h4,
+    h3,
     h1,
     p {
       color: $third_color;
     }
 
-    h4 {
+    h3 {
       @include textMain;
       letter-spacing: 0.5rem;
       text-transform: uppercase;
@@ -80,14 +80,14 @@
       max-width: 100%;
       padding: 0 2.5rem;
 
-      h4,
+      h3,
       h1,
       p {
         color: $third_color;
         font-weight: 300;
       }
 
-      h4 {
+      h3 {
         font-size: 1.4rem;
         margin: 0;
       }
@@ -561,7 +561,7 @@ header {
     align-items: center;
 
     a,
-    h3:last-child {
+    h6:last-child {
       @include textStyle(1.4rem, $font_poppins, 300);
       text-align: center;
       color: $third_color;

@@ -96,7 +96,7 @@ const Landing: React.FC = () => {
           <div className="modal_bottom">
             <a href="mailto:yakubueric@gmail.com">yakubueric@gmail.com</a>
             <a href="tel:+1(647)-464-7997">+1(647)-464-7997</a>
-            <h3>Uxbridge, ON</h3>
+            <h6>Uxbridge, ON</h6>
           </div>
         </div>
       ) : (
@@ -120,7 +120,11 @@ const Landing: React.FC = () => {
                 <a href="#contact">Contact</a>
               </li>
             </ul>
-            <button className="button button_dark menu" onClick={changeModal}>
+            <button
+              className="button button_dark menu"
+              id="menu_btn"
+              onClick={changeModal}
+            >
               <FiMenu />
             </button>
             <div className="header_controls">
@@ -129,6 +133,7 @@ const Landing: React.FC = () => {
               </a>
               <div className="theme">
                 <button
+                  id="theme_btn"
                   className={`theme_button ${
                     theme ? null : "theme_button_theme"
                   }`}
@@ -139,7 +144,7 @@ const Landing: React.FC = () => {
             </div>
           </header>
           <div className="landing_main">
-            <h4>front-end web developer</h4>
+            <h3>front-end web developer</h3>
             <h1>eric yakubu</h1>
             <p>
               Hi There! I'm Eric, a Front-End Developer. The main characteristic

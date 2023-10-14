@@ -12,31 +12,27 @@ const Skills: React.FC = () => {
         technologies and always looking for a new challenges to tackle.
       </p>
       <div className="skills_first">
-        {skillsArray.map((skill, i) => (
-          <>
-            {i < skillsArray.length - 3 ? (
-              <Skill
-                key={`skill ${i}`}
-                name={skill[0] as string}
-                image={skill[1] as JSX.Element}
-              />
-            ) : null}
-          </>
-        ))}
+        {skillsArray.map((skill, i) =>
+          i < skillsArray.length - 3 ? (
+            <Skill
+              key={`skill ${i}`}
+              name={skill[0] as string}
+              image={skill[1] as JSX.Element}
+            />
+          ) : null
+        )}
       </div>
       <div className="line_break" />
       <div className="skills_second">
-        {skillsArray.map((skill, i) => (
-          <>
-            {i >= skillsArray.length - 3 ? (
-              <Skill
-                key={`skill ${i}`}
-                name={skill[0] as string}
-                image={skill[1] as JSX.Element}
-              />
-            ) : null}
-          </>
-        ))}
+        {skillsArray.map((skill, i) =>
+          i >= skillsArray.length - 3 ? (
+            <Skill
+              key={`skill ${i}`}
+              name={skill[0] as string}
+              image={skill[1] as JSX.Element}
+            />
+          ) : null
+        )}
       </div>
     </div>
   );
