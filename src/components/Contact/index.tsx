@@ -64,7 +64,7 @@ const Contact: React.FC = () => {
         <span />
         <a href="tel:+7(925)-559-0050">+7(925)-559-0050</a>
       </div>
-      <h3>Uxbridge, ON</h3>
+      <h3>Russia, Samara</h3>
     </div>
   );
 };
