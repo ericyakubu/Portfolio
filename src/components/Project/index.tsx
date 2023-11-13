@@ -1,19 +1,12 @@
 import React from "react";
 import "./project.scss";
+import { Projects } from "../../types";
 
 interface Props {
-  project: {
-    name: string;
-    discription: string;
-    stack: string[];
-    link: string;
-    git: string;
-    img: string;
-  };
+  project: Projects;
 }
 
 const Project: React.FC<Props> = ({ project }) => {
-  // console.log(project.stack);
   return (
     <div className="project">
       <img className="project_img" src={project.img} alt={project.name} />
@@ -29,9 +22,17 @@ const Project: React.FC<Props> = ({ project }) => {
           <a className="project_link" href={project.link} target="_blank">
             link.
           </a>
-          <a className="project_link" href={project.git} target="_blank">
-            github.
-          </a>
+          {project.git.length > 1 ? (
+            project.git.map((proj, i) => (
+              <a className="project_link" key={i} href={proj} target="_blank">
+                {i === 0 ? "frontend." : "backend."}
+              </a>
+            ))
+          ) : (
+            <a className="project_link" href={project.git[0]} target="_blank">
+              github.
+            </a>
+          )}
         </div>
       </div>
     </div>

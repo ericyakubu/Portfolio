@@ -121,14 +121,14 @@ const Landing: React.FC = () => {
               </li>
             </ul>
             <button
-              className="button button_dark menu"
+              className="button button__dark menu"
               id="menu_btn"
               onClick={changeModal}
             >
               <FiMenu />
             </button>
             <div className="header_controls">
-              <a className="button button_dark" href="#contact">
+              <a className="button button__dark" href="#contact">
                 Get in touch
               </a>
               <div className="theme">
@@ -151,7 +151,7 @@ const Landing: React.FC = () => {
               of my work can be described as: «‎Get done. Fast». I am looking
               for exciting projects, and this is my portfolio.
             </p>
-            <a className="button button_dark" href="#contact">
+            <a className="button button__dark" href="#contact">
               Get in touch
             </a>
           </div>

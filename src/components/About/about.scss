@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: center;
 
-  &_main {
+  &__main {
     width: 130rem;
     max-width: calc(100% - 5rem);
     max-height: calc(100% - 12rem);
@@ -25,7 +25,7 @@
     -ms-border-radius: 3rem;
     -o-border-radius: 3rem;
 
-    &_me {
+    &__me {
       width: 50%;
       height: 100%;
       padding: 4rem;
@@ -83,7 +83,7 @@
       -o-transition: all 0.5s ease;
     }
     &:hover {
-      .about_main_img {
+      .about__main_img {
         filter: none;
         -webkit-filter: none;
       }

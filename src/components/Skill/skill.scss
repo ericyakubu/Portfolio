@@ -32,6 +32,7 @@
     @include textStyle(1.4rem, $font_poppins, 200);
     text-transform: capitalize;
     color: $fifth_color;
+    text-align: center;
   }
 }
 

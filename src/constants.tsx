@@ -43,7 +43,10 @@ export const projects: Projects[] = [
       "SCSS",
     ],
     link: "https://styled-ericyakubu.vercel.app/",
-    git: "https://github.com/ericyakubu/Styled",
+    git: [
+      "https://github.com/ericyakubu/Styled",
+      "https://github.com/ericyakubu/Styled-server",
+    ],
     img: "./img/shop.webp",
   },
   {
@@ -52,7 +55,7 @@ export const projects: Projects[] = [
       "This application is built for users to navigate through a vast database of cars to find the one they want to rent. The application allows them to see all the details about the selected car to make sure they will make the best choice for them.",
     stack: ["Next.js", "Axios", "Tailwind"],
     link: "https://wheelzhub-ericyakubu.vercel.app/",
-    git: "https://github.com/ericyakubu/Wheelzhub",
+    git: ["https://github.com/ericyakubu/Wheelzhub"],
     img: "./img/cars.webp",
   },
   {
@@ -61,7 +64,7 @@ export const projects: Projects[] = [
       "A new alternative to YouTube entered the market. This application lets you browse millions of videos you can enjoy in your free time.",
     stack: ["React.js", "Axios", "Material UI"],
     link: "https://youtube-ericyakubu.vercel.app/",
-    git: "https://github.com/ericyakubu/youtube",
+    git: ["https://github.com/ericyakubu/youtube"],
     img: "./img/calculator.webp",
   },
   {
@@ -70,7 +73,19 @@ export const projects: Projects[] = [
       "This application allows you to browse through hundreds of exercises for your gym and at-home workouts. Here, you can find all sorts of exercises for any body muscle group to ensure you get the best results in the shortest amount of time.",
     stack: ["React.js", "Material UI"],
     link: "https://fitness-app-ericyakubu.vercel.app/",
-    git: "https://github.com/ericyakubu/fitness_app",
+    git: ["https://github.com/ericyakubu/fitness_app"],
     img: "./img/barbel.webp",
   },
 ];
+
+export const aboutMe = {
+  first: `I'm a creative and competent Front-End Web Developer offering 3+
+  years of experience designing and developing multiple web-based
+  applications and websites incorporating various technologies.`,
+  second: `I aspire to combine my broad background with strong technical
+  skills to excel as a Front-End Developer and hope to learn more
+  from more experienced colleagues. I primarily focus on building
+  clean, practical, and elegant code. Enjoy working closely with
+  team members to ensure workloads are effectively redirected for
+  better results.`,
+};

@@ -9,6 +9,6 @@ export interface Projects {
   discription: string;
   stack: string[];
   link: string;
-  git: string;
+  git: string[];
   img: string;
 }

@@ -42,7 +42,7 @@ const Contact: React.FC = () => {
           A few words about the project:
           <textarea rows={5} name="user_message" />
         </label>
-        <button className="button button_dark" type="submit" value="Send">
+        <button className="button button__dark" type="submit" value="Send">
           Send
         </button>
       </form>
